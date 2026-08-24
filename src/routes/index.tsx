@@ -7,6 +7,11 @@ import a296 from "@/assets/a_296.jpg.asset.json";
 import a317 from "@/assets/a_317.jpg.asset.json";
 import a318 from "@/assets/a_318.jpg.asset.json";
 import aud from "@/assets/img-20260824-wa0084.jpg.asset.json";
+import freelance from "@/assets/quality_restoration_20260824105900666.jpg.asset.json";
+import couple from "@/assets/quality_restoration_20260824103403767.jpg.asset.json";
+import solo from "@/assets/meitu_20260824_101837418.jpg.asset.json";
+import family from "@/assets/quality_restoration_20260823104847633.jpg.asset.json";
+import friends from "@/assets/img-20260822-wa0226.jpg.asset.json";
 import vid from "@/assets/vid_20260822_063622_857.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
