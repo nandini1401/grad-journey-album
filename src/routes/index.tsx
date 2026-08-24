@@ -119,11 +119,11 @@ const entries: Entry[] = [
   },
   {
     src: a296.url,
-    alt: "Foto bersama jajaran pimpinan kampus di atas panggung",
+    alt: "Foto bersama jajaran pimpinan kampus dan Bapak di atas panggung",
     chapter: "Bab lima",
-    title: "Berdiri sejajar dengan orang-orang hebat",
-    note: "Lihat barisan itu. Kamu ada di sana, bukan sebagai penonton, tapi sebagai salah satu yang dirayakan. Aku selalu tahu tempatmu memang di panggung.",
-    caption: "satu frame yang akan kita ceritakan lama",
+    title: "Berdiri sejajar, dengan Bapakmu di sampingmu",
+    note: "Lihat barisan itu. Bapakmu berdiri tegak di sampingmu, bukan cuma sebagai orang tua, tapi saksi dari segala kerja kerasmu. Dalam satu frame, kalian berdua sama-sama ada di panggung kebanggaan.",
+    caption: "Bapakmu ada, dan matanya berkata 'itulah anakku'",
     tilt: "-2deg",
   },
   {
