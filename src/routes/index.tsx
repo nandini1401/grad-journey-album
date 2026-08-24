@@ -178,13 +178,13 @@ const entries: Entry[] = [
 
 function Index() {
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="min-h-screen overflow-x-hidden bg-navy-deep text-foreground">
       <section className="relative mx-auto flex min-h-[92vh] max-w-5xl flex-col items-center justify-center px-6 py-20 text-center">
         <Reveal>
           <p className="font-hand text-2xl text-muted-foreground">untukmu, yang akhirnya sampai</p>
         </Reveal>
         <Reveal>
-          <h1 className="mt-4 font-display text-6xl leading-[0.95] font-light tracking-tight text-navy-deep sm:text-8xl">
+          <h1 className="mt-4 font-display text-6xl leading-[0.95] font-light tracking-tight text-white sm:text-8xl">
             Selamat
             <span className="mt-1 block italic">Wisuda</span>
           </h1>
@@ -200,7 +200,7 @@ function Index() {
           </p>
         </Reveal>
         <Reveal>
-          <p className="mt-10 font-hand text-3xl text-navy-deep">terima kasih sudah tidak menyerah</p>
+          <p className="mt-10 font-hand text-3xl text-white">terima kasih sudah tidak menyerah</p>
         </Reveal>
         <Reveal>
           <div className="mt-14 flex flex-col items-center gap-2">
@@ -245,7 +245,7 @@ function Index() {
                   <span className="font-body text-[0.7rem] tracking-[0.3em] text-muted-foreground uppercase">
                     {e.chapter}
                   </span>
-                  <h2 className="mt-3 font-display text-3xl leading-tight font-light text-navy-deep sm:text-4xl">
+                  <h2 className="mt-3 font-display text-3xl leading-tight font-light text-white/95 sm:text-4xl">
                     {e.title}
                   </h2>
                   <div className="mt-5 h-px w-14 bg-ink/25" />
@@ -265,7 +265,7 @@ function Index() {
             <span className="font-body text-[0.7rem] tracking-[0.3em] text-muted-foreground uppercase">
               Bab terakhir
             </span>
-            <h2 className="mt-3 font-display text-4xl font-light text-navy-deep sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-light text-white sm:text-5xl">
               Momen yang bergerak
             </h2>
             <p className="mx-auto mt-4 max-w-lg font-body text-sm leading-relaxed text-muted-foreground">
