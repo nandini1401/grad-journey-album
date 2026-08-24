@@ -221,16 +221,19 @@ function Index() {
                   i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                <div className="w-full md:w-[55%]">
+                <div className="scene w-full md:w-[55%]">
                   <div
-                    className="paper-card tape-corner p-3 pb-16 sm:p-4 sm:pb-20"
-                    style={{ transform: `rotate(${e.tilt})` }}
+                    className={`paper-card tape-corner card-3d p-3 pb-16 sm:p-4 sm:pb-20 ${
+                      i % 2 === 0 ? "lean-left" : "lean-right"
+                    }`}
+                    style={{ ["--tilt" as string]: e.tilt }}
                   >
                     <img
                       src={e.src}
                       alt={e.alt}
                       loading="lazy"
-                      className="aspect-[4/3] w-full object-cover"
+                      className="w-full object-cover"
+                      style={{ aspectRatio: e.ratio ?? "4/3" }}
                     />
                     <p className="absolute right-0 bottom-5 left-0 px-4 text-center font-hand text-xl text-muted-foreground sm:text-2xl">
                       {e.caption}
