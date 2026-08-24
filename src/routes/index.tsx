@@ -68,9 +68,19 @@ type Entry = {
   note: string;
   caption: string;
   tilt: string;
+  ratio?: string;
 };
 
 const entries: Entry[] = [
+  {
+    src: freelance.url,
+    alt: "Bekerja freelance di depan laptop saat masih kuliah",
+    chapter: "Bab nol",
+    title: "Sebelum toga, ada layar dan tenggat",
+    note: "Sambil kuliah kamu freelance — cari pengalaman, cari jam terbang, cari versi dirimu yang lebih siap. Ruangan sepi, dua laptop menyala, dan kamu yang tetap fokus walau lelah. Dari sinilah semuanya pelan-pelan dibangun.",
+    caption: "kerja sambil kuliah, diam-diam menempa diri",
+    tilt: "1.5deg",
+  },
   {
     src: a318.url,
     alt: "Berdiri di podium sidang senat terbuka wisuda",
