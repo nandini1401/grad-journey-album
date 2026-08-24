@@ -175,8 +175,42 @@
 
 @utility paper-card {
   background-color: var(--card);
-  box-shadow: var(--shadow-paper);
-  border: 1px solid oklch(0.22 0.06 265 / 0.1);
+  box-shadow:
+    0 1px 0 oklch(1 0 0 / 0.9) inset,
+    0 2px 4px -1px oklch(0.12 0.02 265 / 0.18),
+    0 10px 18px -8px oklch(0.12 0.02 265 / 0.32),
+    0 34px 60px -26px oklch(0.22 0.06 265 / 0.55);
+  border: 1px solid oklch(0.22 0.06 265 / 0.12);
+}
+
+@utility scene {
+  perspective: 1400px;
+  perspective-origin: 50% 40%;
+}
+
+@utility card-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: rotate(var(--tilt, 0deg)) rotateY(var(--lean, 0deg)) rotateX(2deg)
+    translateZ(0);
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s ease;
+  &:hover {
+    transform: rotate(0deg) rotateY(0deg) rotateX(0deg) translateZ(28px) scale(1.02);
+    box-shadow:
+      0 1px 0 oklch(1 0 0 / 0.9) inset,
+      0 18px 30px -12px oklch(0.12 0.02 265 / 0.38),
+      0 56px 90px -34px oklch(0.22 0.06 265 / 0.62);
+  }
+}
+
+@utility lean-left {
+  --lean: 9deg;
+}
+
+@utility lean-right {
+  --lean: -9deg;
 }
 
 @utility tape {

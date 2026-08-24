@@ -7,6 +7,11 @@ import a296 from "@/assets/a_296.jpg.asset.json";
 import a317 from "@/assets/a_317.jpg.asset.json";
 import a318 from "@/assets/a_318.jpg.asset.json";
 import aud from "@/assets/img-20260824-wa0084.jpg.asset.json";
+import freelance from "@/assets/quality_restoration_20260824105900666.jpg.asset.json";
+import couple from "@/assets/quality_restoration_20260824103403767.jpg.asset.json";
+import solo from "@/assets/meitu_20260824_101837418.jpg.asset.json";
+import family from "@/assets/quality_restoration_20260823104847633.jpg.asset.json";
+import friends from "@/assets/img-20260822-wa0226.jpg.asset.json";
 import vid from "@/assets/vid_20260822_063622_857.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -63,9 +68,19 @@ type Entry = {
   note: string;
   caption: string;
   tilt: string;
+  ratio?: string;
 };
 
 const entries: Entry[] = [
+  {
+    src: freelance.url,
+    alt: "Bekerja freelance di depan laptop saat masih kuliah",
+    chapter: "Bab nol",
+    title: "Sebelum toga, ada layar dan tenggat",
+    note: "Sambil kuliah kamu freelance — cari pengalaman, cari jam terbang, cari versi dirimu yang lebih siap. Ruangan sepi, dua laptop menyala, dan kamu yang tetap fokus walau lelah. Dari sinilah semuanya pelan-pelan dibangun.",
+    caption: "kerja sambil kuliah, diam-diam menempa diri",
+    tilt: "1.5deg",
+  },
   {
     src: a318.url,
     alt: "Berdiri di podium sidang senat terbuka wisuda",
@@ -120,6 +135,45 @@ const entries: Entry[] = [
     caption: "ruangan penuh orang yang bangga padamu",
     tilt: "1.6deg",
   },
+  {
+    src: solo.url,
+    alt: "Berpose mengenakan jas almamater dengan selempang cumlaude",
+    chapter: "Bab tujuh",
+    title: "Selempang itu, dan senyum yang kamu tahan",
+    note: "Sarjana Teknik Informatika, cum laude. Tapi yang paling aku suka bukan tulisan emas di selempangnya — melainkan raut lega di wajahmu, seperti akhirnya boleh bernapas panjang.",
+    caption: "cum laude, dan senyum yang paling kutunggu",
+    tilt: "-1.8deg",
+    ratio: "3/4",
+  },
+  {
+    src: family.url,
+    alt: "Foto bersama orang tua dan keluarga di depan backdrop wisuda",
+    chapter: "Bab delapan",
+    title: "Orang tuamu datang, dan itu segalanya",
+    note: "Mereka yang paling lama menunggu hari ini akhirnya berdiri di sampingmu. Piagam itu dipegang bapakmu, ibumu di sisimu — semua doa yang dulu diam-diam dipanjatkan, hari ini terjawab di satu foto.",
+    caption: "orang tua yang hadir, kebanggaan yang penuh",
+    tilt: "2deg",
+    ratio: "3/4",
+  },
+  {
+    src: friends.url,
+    alt: "Foto bersama teman-teman seangkatan mengenakan toga",
+    chapter: "Bab sembilan",
+    title: "Teman seperjuangan sampai garis akhir",
+    note: "Kalian pernah saling menyemangati waktu semuanya terasa berat. Hari ini berdiri sebaris dengan toga yang sama — bukti bahwa perjuangan itu memang tidak pernah kamu jalani sendirian.",
+    caption: "satu angkatan, satu perjuangan",
+    tilt: "-1.5deg",
+  },
+  {
+    src: couple.url,
+    alt: "Berfoto berdua membawa buket bunga di hari wisuda",
+    chapter: "Bab sepuluh",
+    title: "Dan aku, berdiri di sebelahmu",
+    note: "Aku bawakan bunga, kamu bawakan kabar baik. Dari semua foto hari itu, ini yang paling sering aku buka — karena di sini aku bukan cuma penonton, tapi bagian dari ceritamu.",
+    caption: "hari besarmu, dan aku di sampingmu",
+    tilt: "1.9deg",
+    ratio: "3/4",
+  },
 ];
 
 function Index() {
@@ -167,16 +221,19 @@ function Index() {
                   i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                <div className="w-full md:w-[55%]">
+                <div className="scene w-full md:w-[55%]">
                   <div
-                    className="paper-card tape-corner p-3 pb-16 sm:p-4 sm:pb-20"
-                    style={{ transform: `rotate(${e.tilt})` }}
+                    className={`paper-card tape-corner card-3d p-3 pb-16 sm:p-4 sm:pb-20 ${
+                      i % 2 === 0 ? "lean-left" : "lean-right"
+                    }`}
+                    style={{ ["--tilt" as string]: e.tilt }}
                   >
                     <img
                       src={e.src}
                       alt={e.alt}
                       loading="lazy"
-                      className="aspect-[4/3] w-full object-cover"
+                      className="w-full object-cover"
+                      style={{ aspectRatio: e.ratio ?? "4/3" }}
                     />
                     <p className="absolute right-0 bottom-5 left-0 px-4 text-center font-hand text-xl text-muted-foreground sm:text-2xl">
                       {e.caption}
